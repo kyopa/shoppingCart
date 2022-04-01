@@ -20,45 +20,55 @@ function Item(props) {
         props.setNumOfItems(sum)
     }
 
-    
     const [input, setInput] = useState(1)
 
     function addToCart(e) {
-        e.preventDefault();
-        
+        e.preventDefault(); 
         props.setCryptos(prevState => ({
             cryptos: prevState.cryptos.map(item => {
                 return item.title === e.target.id ? {...item, inCart: item.inCart + parseInt(input)} : item
             }) 
         }))
-
-        
     }
+
+    const minus = () => input > 0 ? setInput(input - 1) : null;
+    const plus = () => setInput(input + 1);
 
     const crypto = props.cryptos.cryptos.find(el => el.title === match.params.id)
     console.log(crypto)
     return(
-        <div>
+        <div className="item">
             <h1>{match.params.id}</h1>
-            <h2>{crypto.price}</h2>
-            <img src={images[match.params.id]} className="product-img"></img>
-
+            <h2>{crypto.price} USD</h2>
+            
             <form >
                 <div className="box">
-                    <label>Amount</label>
-                    <div className="plus-min">
-                        <img src={icons.minus} id={match.params.id} onClick={() => input > 0 ? setInput(input - 1) : null}></img>
-                        <img src={icons.plus} id={match.params.id} onClick={() => setInput(input + 1)}></img>
-                    </div>
-                    
-                </div>
-
                 <input type="number" id="amount" onInput={(e) => setInput(e.target.value)} value={input}></input>
+                    <div className="plus-min">
+                        <MinusButton id={match.params.id} onClick={minus}></MinusButton>
+                        <PlusButton id={match.params.id} onClick={plus}></PlusButton>    
+                    </div>
+                </div>
+                
                 <button id={match.params.id} onClick={(e) => addToCart(e)}>Add To Cart</button>
             </form>
             
         </div>
     )
 }
+
+
+export function PlusButton(props) {
+    return(
+        <img src={icons.plus} id={props.id} onClick={props.onClick} ></img>
+    )
+}
+
+export function MinusButton(props) {
+    return <img src={icons.minus} id={props.id} onClick={props.onClick}></img>
+}
+
+
+
 
 export default Item;

@@ -5,7 +5,7 @@ import Home from "./Home";
 import "./styles.css"
 import Item from "./Item";
 import icons from "./icons";
-import Checkout from "./Checkout";
+import Checkout, {Pay} from "./Checkout";
 
 
 
@@ -19,20 +19,20 @@ const App = () => {
             {
                 title: "Bitcoin",
                 id: crypto.randomUUID(),
-                price: "40,000 USD",
+                price: "40,000",
                 inCart: 0
             },
             {
                 title: "Ethereum",
                 id: crypto.randomUUID(),
-                price: "3700 USD",
+                price: 3700,
                 inCart: 0,
             },
             {
                 title: "Dogecoin",
                 id: crypto.randomUUID(),
-                price: "0.12 USD",
-                inCart: 0
+                price: 0.12,
+                inCart: 2
             }
         ]
     })
@@ -46,8 +46,12 @@ const App = () => {
                 <Link to="shop">Shop</Link>
 
                 <div className="cart">
-                    <img src={icons.cart}></img>
-                    <div >{numOfItems}</div>
+                    <div className="bag">
+
+                        <h4>BAG</h4>
+                        <div >{numOfItems}</div>
+                    </div>
+                    
 
                     <Link to="/shop/checkout" id="checkout">Checkout</Link>
                 </div>
@@ -57,7 +61,8 @@ const App = () => {
                 <Route path="/" element={<Home />}></Route>
                 <Route path="/shop" element={<Shop cryptos={cryptos} setCryptos={setCryptos}/>}></Route>
                 <Route path="/shop/:id" element={<Item cryptos={cryptos} setCryptos={setCryptos} numOfItems={numOfItems} setNumOfItems={setNumOfItems}/>}></Route>
-                <Route path="/shop/checkout" element={<Checkout cryptos={cryptos}/>}></Route>
+                <Route path="/shop/checkout" element={<Checkout cryptos={cryptos} setCryptos={setCryptos} setNumOfItems={setNumOfItems} numOfItems={numOfItems}/>}></Route>
+                <Route path="/shop/checkout/pay" element={<Pay />}></Route>
             </Routes>
             </BrowserRouter>
         </div>

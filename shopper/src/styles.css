@@ -1,30 +1,135 @@
 body, html {
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height: 1000px
+    height: 1000px;
+    background-color: black;
+}
+
+.links a {
+    color: black;
+    text-shadow:
+    0 0 7px #6df7fb,
+    0 0 10px #6df7fb,
+    0 0 21px #6df7fb,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
 }
 
 .links {
     display: flex;
     gap: 50px;
     align-items: center;
+    color: #435657;
+    border-bottom-left-radius: 20%;
+    box-shadow:
+    inset 0 0 50px #6df7fb,      /* inner white */
+    inset 20px 0 80px black,   /* inner left magenta short */
+    inset -20px 0 80px #6df7fb,  /* inner right cyan short */
+    inset 20px 0 300px black,  /* inner left magenta broad */
+    inset -20px 0 300px #6df7fb, /* inner right cyan broad */
+    0 0 50px #6df7fb,            /* outer white */
+    -10px 0 80px #6df7fb,        /* outer left magenta */
+    10px 0 80px black;         /* outer right cyan */
+}
+
+#amount {
+    text-align: right;
+    font-size: 1.3rem;
+}
+
+img {
+    background-color: #6df7fb;
     
+}
+
+.ball {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+      inset 0 0 50px #6df7fb,      /* inner white */
+      inset 20px 0 80px black,   /* inner left magenta short */
+      inset -20px 0 80px #6df7fb,  /* inner right cyan short */
+      inset 20px 0 300px black,  /* inner left magenta broad */
+      inset -20px 0 300px #6df7fb, /* inner right cyan broad */
+      0 0 50px #6df7fb,            /* outer white */
+      -10px 0 80px #6df7fb,        /* outer left magenta */
+      10px 0 80px black;         /* outer right cyan */
 }
 
 a {
     font-size: 2.1rem;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-decoration: none;
-    color: black;
+    color: #000000;
 }
 
 .App {
     height: 100%;
 }
 
+.bag {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black;
+    text-shadow:
+    0 0 7px #6df7fb,
+    0 0 10px #6df7fb,
+    0 0 21px #6df7fb,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+.bag div {
+    text-align: center;
+    
+}
+
 .shop {
     height: 100%;
-    background-color: pink;
+    padding: 20px;
+    margin-left: 40px;
+    margin-top: 100px;
+    border-radius: 40px;
+    box-shadow:
+    inset 0 0 50px #6df7fb,      /* inner white */
+    inset 20px 0 80px black,   /* inner left magenta short */
+    inset -20px 0 80px #6df7fb,  /* inner right cyan short */
+    inset 20px 0 300px black,  /* inner left magenta broad */
+    inset -20px 0 300px #6df7fb, /* inner right cyan broad */
+    0 0 50px #6df7fb,            /* outer white */
+    -10px 0 80px #6df7fb,        /* outer left magenta */
+    10px 0 80px black;         /* outer right cyan */
+}
+
+.items a, .item div  {
+    color: black;
+    text-shadow: 0 0 10px #6df7fb;
+}
+
+.item {
+    height: 100%;
+    padding: 20px;
+    margin-left: 40px;
+    margin-top: 100px;
+    border-radius: 40px;
+    box-shadow:
+    inset 0 0 50px #6df7fb,      /* inner white */
+    inset 0 0 20px black,
+    0 0 50px #6df7fb,            /* outer white */
+    -10px 0 80px #6df7fb,        /* outer left magenta */
+    10px 0 80px black;         /* outer right cyan */
 }
 
 .shopHeader {
@@ -34,6 +139,7 @@ a {
 }
 
 .cart {
+    height: 80px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -52,33 +158,120 @@ a {
 
 input {
     width: 40px;
+    border-radius: 40px;
+    box-shadow:
+    inset 0 0 25px #6df7fb,      /* inner white */
+    inset 20px 0 40px black,   /* inner left magenta short */
+    inset -10px 0 40px #6df7fb,  /* inner right cyan short */
+    inset 40px 0 150px black,  /* inner left magenta broad */
+    inset -20px 0 150px #6df7fb, /* inner right cyan broad */
+    0 0 30px #6df7fb,            /* outer white */
+    -10px 0 80px #6df7fb,        /* outer left magenta */
+    10px 0 80px black;  
 }
 
 .plus-min {
-    background-color: pink;
-    margin-bottom: 10px; 
+
     display: flex;
+    gap: 10px;
 }
 
 .plus-min img {
     display: flex;
+    padding: 10px;
+    
+    border-radius: 40px;
+    box-shadow:
+    inset 0 0 25px #6df7fb,      /* inner white */
+    inset 20px 0 40px black,   /* inner left magenta short */
+    inset -10px 0 40px #6df7fb,  /* inner right cyan short */
+    inset 40px 0 150px black,  /* inner left magenta broad */
+    inset -20px 0 150px #6df7fb, /* inner right cyan broad */
+    0 0 30px #6df7fb,            /* outer white */
+    -10px 0 80px #6df7fb,        /* outer left magenta */
+    10px 0 80px black;  
 }
 
-button {
-    background-color: pink;
-}
+
 
 #checkout {
     font-size: 1rem;
+    text-shadow:
+    0 0 7px #6df7fb,
+    0 0 10px #6df7fb,
+    0 0 21px #6df7fb,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+
+.checkout img {
+    height: 30px;
+    border-radius: 50%;
+    box-shadow:
+    inset 0 0 25px #6df7fb,      /* inner white */
+    inset 20px 0 40px black,   /* inner left magenta short */
+    inset -10px 0 40px #6df7fb,  /* inner right cyan short */
+    inset 40px 0 150px black,  /* inner left magenta broad */
+    inset -20px 0 150px #6df7fb, /* inner right cyan broad */
+    0 0 30px #6df7fb,            /* outer white */
+    -10px 0 80px #6df7fb,        /* outer left magenta */
+    10px 0 80px black;  
+}
+
+button, .checkout {
+    padding: 20px;
+    margin-left: 40px;
+    margin-top: 100px;
+    border-radius: 40px;
+    box-shadow:
+    inset 0 0 50px #6df7fb,      /* inner white */
+    inset 20px 0 80px black,   /* inner left magenta short */
+    inset -20px 0 80px #6df7fb,  /* inner right cyan short */
+    inset 20px 0 300px black,  /* inner left magenta broad */
+    inset -20px 0 300px #6df7fb, /* inner right cyan broad */
+    0 0 100px #6df7fb,            /* outer white */
+    -10px 0 80px #6df7fb,        /* outer left magenta */
+    10px 0 80px black;  
 }
 
 h2 {
     margin: 0;
+    color: black;
+    text-shadow:
+    0 0 10px #6df7fb,
+    0 0 15px #57e6eb,
+    0 0 20px #46dde2
 }
+
 h1 {
     margin: 0;
     margin-top: 20px;
+    color: black;
+    text-shadow: 0 0 10px #6df7fb;
 }
 
+.buying-items {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black;
+    text-shadow: 
+    0 0 3px #6df7fb,
+    0 0 8px rgb(182, 174, 174),
+    0 0 8px black;
+    
+}
 
+#go-back {
+    margin-top: 50px;
+}
+
+#go-back a {
+    font-size: large;
+    
+}
 

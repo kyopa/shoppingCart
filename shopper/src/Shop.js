@@ -34,7 +34,7 @@ const Shop = (props) => {
                         
                         
                         <Link to={`/shop/${item.title}`} >{item.title}</Link>
-                        <div>{item.price}</div>
+                        <div>{item.price} USD</div>
                     </div>
                 )
                 })}
