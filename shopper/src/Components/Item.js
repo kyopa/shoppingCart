@@ -1,7 +1,7 @@
 import React, {useState, useEffect, prevState} from "react";
 import {useMatch} from "react-router";
-import images from "./images";
-import icons from "./icons";
+
+import icons from "../icons/icons";
 
 
 

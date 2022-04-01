@@ -1,11 +1,11 @@
 import { Link, BrowserRouter, Routes, Route} from "react-router-dom";
 import React, {useState} from "react";
-import Shop from "./Shop";
-import Home from "./Home";
+import Shop from "./Components/Shop";
+import Home from "./Components/Home";
 import "./styles.css"
-import Item from "./Item";
-import icons from "./icons";
-import Checkout, {Pay} from "./Checkout";
+import Item from "./Components/Item";
+import icons from "./icons/icons";
+import Checkout, {Pay} from "./Components/Checkout";
 
 
 
